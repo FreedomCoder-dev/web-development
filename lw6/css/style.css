@@ -1,0 +1,438 @@
+@font-face
+{
+    font-family: OpenSansSemibold;
+    src: url("../fonts/opensans_semibold.ttf");
+}
+
+@font-face
+{
+    font-family: OpenSansBold;
+    src: url("../fonts/opensans_bold.ttf");
+}
+@font-face
+{
+    font-family: OpenSansRegular;
+    src: url("../fonts/opensans_regular.ttf");
+}
+
+.top-menu
+{
+    display: flex;
+    width: 960px;
+    height: 50px;
+    flex-direction: row;
+}
+
+.top-menu-about-me
+{
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    background: #15a98c;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+.top-menu-element
+{
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.top-menu-text
+{
+    font-family: Georgia;
+    margin-left: 10px;
+}
+
+.background
+{
+    width: 1920px;
+    height: 400px;
+    background-image: url("../images/background.png");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+}
+
+.main-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 22px;
+    margin-left: 20px;
+    height: 1200px;
+}
+.upper-container
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 960px;
+    height: 205px;
+    margin-bottom: 50px;
+    margin-top: -205px;
+    overflow: visible;
+}
+
+.lower-container
+{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    width: 960px;
+    margin-right: 22px;
+    margin-left: 20px;
+}
+
+.favourite-films
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 1040px;
+    background: #f9f9f9;
+}
+
+.films-heading
+{
+    margin-top: 40px;
+    margin-bottom: 25px;
+    width: 1200px;
+    font: normal 32px OpenSansRegular;
+}
+
+.favourite-films-container
+{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 760px;
+}
+
+.favourite-films-element
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 285px;
+    margin-right: 20px;
+}
+
+.film-name
+{
+    font: bold 20px OpenSansBold;
+    color: #333333;
+}
+
+.form-block
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: 940px;
+}
+
+.film-description
+{
+    font: normal 16px/1.6 Georgia;
+    color: #333333;
+}
+
+.all-films-button
+{
+    width: 220px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    border-radius: 6px;
+    background: #15a98c;
+    border-width: 0px;
+    font: normal 14px Georgia;
+}
+
+.all-films-button:active
+{
+    background: #098d72;
+}
+
+.submit
+{
+    width: 220px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    border-radius: 6px;
+    background: #15a98c;
+    border-width: 0px;
+    font: normal 14px Georgia;
+}
+
+.submit:active
+{
+    background: #098d72;
+}
+
+.footer
+{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: #f5f5f5;
+    color: #7e7e7e;
+}
+
+.copyright
+{
+    margin-top: 25px;
+    font: normal 16px Georgia;
+}
+
+.img-item
+{
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.img-film-item
+{
+    border-radius: 5px;
+}
+
+.img-container
+{
+    display: flex;
+    align-items: flex-end;
+    background: #464646;
+    border-radius: 5px;
+    width: 285px;
+    height: 190px;
+    overflow: hidden;
+}
+
+.quote-block
+{
+    margin-left: 60px;
+    margin-top: 50px;
+}
+
+.quote
+{
+    font: italic 28px Georgia;
+    color: #8e8e8e;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    width: 440px;
+    position: relative;
+    color: white;
+}
+
+.quotes-author
+{
+    font: normal 16px "Open Sans Semibold";
+    margin-top: 0;
+    padding: 0;
+    width: 440px;
+    color: white;
+}
+
+
+.favourites
+{
+    font: normal 22px OpenSansSemibold;
+    color: #15a98c;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+}
+.favourite-element
+{
+    font: normal 18px Georgia;
+    margin-bottom: 15px;
+}
+
+.first-heading
+{
+    font: normal 40px OpenSansBold;
+    margin: 0;
+    padding: 0;  
+}
+
+.second-heading
+{
+    font-family: OpenSansRegular;
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.text
+{
+    font: normal 20px/1.8 Georgia;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+}
+
+.green-line
+{
+    margin-top: 24px;
+    margin-bottom: 50px;
+    width: 60px;
+    height: 6px;
+    background: #45c3aa;
+    border-radius: 6px/6px;
+}
+
+.write-me-head
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.write-me-text
+{
+    font: normal 30px OpenSansRegular;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.gray-line
+{
+    width: 200px;
+    height: 1px;
+    background: #c4c4c4;
+    border-radius: 6px/6px;
+}
+
+.write-me
+{
+    font-size: 18px;
+    color: #15a98b;
+}
+.write-me:hover
+{
+    font: normal 18px serif;
+    color: #098d72;
+}
+
+.list-block
+{
+    width: 330px;
+    margin-top: 163px;
+    margin-right: 60px;
+}
+
+.info-block
+{
+    width: 570px;
+}
+
+.underlined-text
+{
+    text-decoration: underline;
+}
+
+.input-box
+{
+    width: 530px;
+    height: 50px;
+    border: 2px solid #a6a6a6;
+    border-radius: 4px;
+    font: normal 18px OpenSansRegular;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+.input-box:hover
+{
+    border: 2px solid #15a98c;
+}
+
+.message-box
+{
+    width: 530px;
+    height: 150px;
+    resize: none;
+    border: 2px solid #a6a6a6;
+    border-radius: 4px;
+    font: normal 18px OpenSansRegular;
+    margin-bottom: 20px;
+}
+
+.message-box:hover
+{
+    border: 2px solid #15a98c;
+}
+
+.form-text
+{
+    font: normal 18px OpenSansRegular;
+}
+
+.required-field
+{
+    color: #ee0707;
+}
+
+.select-box
+{
+    width: 550px;
+    height: 50px;
+    resize: none;
+    border: 2px solid #a6a6a6;
+    border-radius: 4px;
+    font: normal 18px OpenSansRegular;
+    padding-left: 15px;
+}
+
+.select-box:hovered
+{
+    border: 2px solid #15a98c;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+ul
+{
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    padding-left: 18px;
+}
+
+ol
+{
+    margin: 0;
+    padding: 0;
+    padding-left: 18px;
+}
+
