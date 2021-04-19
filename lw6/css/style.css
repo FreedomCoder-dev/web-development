@@ -201,12 +201,6 @@
     font: normal 16px Georgia;
 }
 
-.img-item
-{
-    margin-top: 15px;
-    border-radius: 5px;
-}
-
 .img-film-item
 {
     border-radius: 5px;
@@ -231,17 +225,17 @@
 
 .quote
 {
+    width: 440px;
+    position: relative;
+    color: white;
     font: italic 28px Georgia;
     color: #8e8e8e;
     margin-top: 0;
     margin-bottom: 20px;
     padding: 0;
-    width: 440px;
-    position: relative;
-    color: white;
 }
 
-.quotes-author
+.quote-author
 {
     font: normal 16px "Open Sans Semibold";
     margin-top: 0;
@@ -249,7 +243,6 @@
     width: 440px;
     color: white;
 }
-
 
 .favourites
 {
@@ -259,10 +252,17 @@
     margin-bottom: 30px;
     padding: 0;
 }
+
 .favourite-element
 {
     font: normal 18px Georgia;
     margin-bottom: 15px;
+}
+
+.img-item
+{
+    margin-top: 15px;
+    border-radius: 5px;
 }
 
 .first-heading
