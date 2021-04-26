@@ -1,0 +1,372 @@
+body {
+    background: url(../images/scape.jpg) no-repeat center top/1920px 400px;
+    background-position: 0 50px;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #333333;
+    font: 400 36px/1.5 Open Sans;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+button:hover,
+label:hover,
+.submit_button:hover {
+    cursor: pointer;
+}
+
+.container {
+    margin: 0px 481px;
+    width: 1000px;
+}
+
+.big_container {
+    margin-left: 360px;
+    width: 1200px;
+}
+
+
+/*===================Меню=======================*/
+
+.menu {
+    margin: 10px 0px;
+    height: 50px;
+}
+
+.menu span {
+    padding: 20px 17px 14px 20px;
+    background-color: #fff;
+    color: #333333;
+    font: 19px/1.7 Georgia;
+}
+
+.menu span:hover {
+    background-color: #15a98c;
+    color: #fff
+}
+
+.about_me:before {
+    content: url(../images/about_me_icon.png);
+    margin-right: 10px;
+}
+
+.my_hobby:before {
+    content: url(../images/hobby_icon.png);
+    margin-right: 10px;
+}
+
+.favourite_films:before {
+    content: url(../images/video_icon.png);
+    margin-right: 10px;
+}
+
+.about_me:hover:before {
+    content: url(../images/about_me_icon_white.png);
+    margin-right: 10px;
+}
+
+.my_hobby:hover:before {
+    content: url(../images/hobby_icon_white.png);
+    margin-right: 10px;
+}
+
+.favourite_films:hover:before {
+    content: url(../images/video_icon_white.png);
+    margin-right: 10px;
+}
+
+
+/*===================Шапка=====================*/
+
+.profile {
+    display: grid;
+    grid-template-areas: "my_photo quote";
+    grid-template-rows: 350px;
+    grid-template-columns: 330px 630px;
+    grid-row-gap: 50px;
+    grid-column-gap: 60px;
+    margin-top: 200px;
+}
+
+.my_photo {
+    grid-area: my_photo;
+    height: 350px;
+    border-radius: 5px;
+}
+
+.quote {
+    grid-area: quote;
+}
+
+.citation {
+    margin: 25px 0 15px 2px;
+    font: italic 28px/1.5 Georgia;
+    color: #fff;
+}
+
+.author {
+    color: #fff;
+    font: 600 16px/1 Open Sans;
+    margin: 0 0 0 5px;
+}
+
+
+/*================================================*/
+
+.about_info {
+    display: grid;
+    grid-template-areas: "lists main_info";
+    grid-template-rows: 1fr;
+    grid-template-columns: 330px 570px;
+    grid-row-gap: 50px;
+    grid-column-gap: 60px;
+    margin-top: 42px;
+}
+
+
+/*=======================Списки===================*/
+
+.lists {
+    grid-area: lists;
+}
+
+.favourite {
+    margin: 12px 0 40px 0;
+    padding-left: 22px;
+}
+
+.lists li {
+    color: #555555;
+    font: 19px/1.9 Georgia;
+}
+
+.lists h2 {
+    margin: 0px;
+    color: #15a98c;
+    font: 600 24px/1.5 Open Sans;
+}
+
+
+/*==========================Главная инфа===================*/
+
+.main_info {
+    grid-area: main_info;
+    margin-top: -172px
+}
+
+.main_info h1 {
+    color: #333333;
+    font: bold 48px/1.5 Open Sans;
+    margin: 0px;
+}
+
+.img_line {
+    margin: 14px 0 40px 0;
+    width: 62px;
+    height: 8px;
+}
+
+.main_info h2 {
+    margin: 37px 0 11px 0;
+}
+
+.text_about_me {
+    color: #555555;
+    font: 19px/1.7 Georgia;
+    margin: 0;
+}
+
+.vk_link {
+    display: block;
+    margin-top: 45px;
+    color: #15a98b;
+    font: 19px/1.5 Georgia;
+}
+
+.vk_link:hover {
+    color: #098d72;
+}
+
+.vk_link_underline {
+    text-decoration: underline;
+}
+
+
+/*=======================фильмы======================*/
+
+.about_films {
+    display: grid;
+    grid-template-areas: "film_1 film_2 film_3 film_4";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.first_film {
+    grid-area: film_1;
+}
+
+.second_film {
+    grid-area: film_2;
+}
+
+.third_film {
+    grid-area: film_3;
+}
+
+.fourth_film {
+    grid-area: film_4;
+}
+
+.film_name {
+    color: #333333;
+    font: bold 22px/1.4 Open Sans;
+    margin: 18px 0 18px 0;
+}
+
+.description {
+    color: #555555;
+    font: 16px/1.75 Georgia;
+}
+
+.big_container h2 {
+    margin-bottom: 27px;
+}
+
+.green_button {
+    width: 220px;
+    height: 50px;
+    background-color: #15a98b;
+    border: none;
+    border-radius: 5px;
+    color: #f5f5f5;
+    font: 19px/1.7 Georgia;
+    margin: 37px 0px 0 40%;
+}
+
+.green_button:hover {
+    background-color: #098d72;
+}
+
+
+/*===========================форма=========================*/
+
+.form {
+    margin: 0 210px;
+}
+
+.form_head {
+    color: #333333;
+    text-transform: uppercase;
+    font: 300 36px/1.2 Open Sans;
+    margin: 104px 0 68px 122px;
+}
+
+.form_head:before,
+.form_head:after {
+    content: '';
+    display: inline-block;
+    width: 200px;
+    vertical-align: middle;
+    border-top: 1px solid #4e4e4e;
+}
+
+.form_head:before {
+    margin-right: 28px;
+}
+
+.form_head:after {
+    margin-left: 20px;
+}
+
+.paragraph {
+    color: #333333;
+    font: 400 20px/1.6 Open Sans;
+    display: block;
+    margin: 24px 0 3px -2px;
+}
+
+.star {
+    margin-left: 5px;
+    color: red;
+}
+
+.text_input {
+    color: #333333;
+    font: 400 18px/1.8 Open Sans;
+    border: 2px solid #c9c9c9;
+    border-radius: 3px;
+    margin-right: 36px;
+    padding-left: 10px;
+    width: 526px;
+    height: 44px
+}
+
+.place {
+    background: url(../images/arrow_down.jpg) no-repeat 490px;
+    width: 540px;
+    height: 52px;
+    margin-bottom: 16px;
+    padding-left: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.gender {
+    border: none;
+}
+
+.submit_button {
+    margin: 46px 0 0 0;
+}
+
+.your_message {
+    margin-top: 37px;
+}
+
+.text_input:focus,
+.message:focus {
+    outline: 2px solid #15a98b;
+    border: 2px solid #15a98b;
+}
+
+.message {
+    width: 523px;
+    height: 143px;
+    resize: none;
+}
+
+.message_success {
+    color: #357c20;
+    font: 400 20px/1.6 Open Sans;
+}
+
+.message_error {
+    color: red;
+    font: 400 20px/1.6 Open Sans;
+}
+
+.error_message {
+    color: #e70e0e;
+}
+
+
+/*===========================подвал========================*/
+
+footer {
+    height: 70px;
+    width: 1920px;
+    background-color: #f5f5f5;
+    text-align: center;
+    color: #555555;
+    font: 16px/1.5 Georgia;
+    margin-top: 72px;
+    padding-top: 2px;
+}
