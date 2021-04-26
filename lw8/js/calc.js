@@ -1,53 +1,47 @@
-function  calc(calcStr) {
+function calc(calcStr) {
     calcStr = calcStr.replace(/[()]/g, ' ');
     calcStr = calcStr.replace(/\s+/g, ' ').trim();
-    let symbAndNum = calcStr.split(' ');
+    let tokens = calcStr.split(' ');
     
     let i = 0;
-    let div0 = false;
-    let missChStr = false;
-    let corrStr = true;
+    let computeFail = false;
+    let invalState = false;
+    let invalFormat = true;
 
-    for (let k = 0; k < symbAndNum.length; k++) {
-        if (!((isFinite(symbAndNum[k])) ||
-             ((symbAndNum[k] == '*')    ||
-              (symbAndNum[k] == '/')    || 
-              (symbAndNum[k] == '+')    || 
-              (symbAndNum[k] == '-')))) {
-            corrStr = false;
+    for (let k = 0; k < tokens.length; k++) {
+        if (!((isFinite(tokens[k])) ||
+             ['*', '/', '+', '-'].includes(tokens[i]))) {
+            invalFormat = false;
         } 
     }
 
-    while (symbAndNum.length > 1) {
-        if (!corrStr) {
+    while (tokens.length > 1) {
+        if (!invalFormat) {
             break;
         }
 
-        if (symbAndNum.length < 3)  {
-            missChStr = true;
+        if (tokens.length < 3)  {
+            invalState = true;
             break;
         }
 
-        if (((symbAndNum[i] === '*') ||
-            (symbAndNum[i] === '/') ||
-             (symbAndNum[i] === '+') ||
-             (symbAndNum[i] === '-')) &&
-             (isFinite(symbAndNum[i + 1])) && 
-             (isFinite(symbAndNum[i + 2])) ) {
-            symbAndNum[i] = mathematics(symbAndNum[i], symbAndNum[i + 1], symbAndNum[i + 2]);
+        if (['*', '/', '+', '-'].includes(tokens[i]) &&
+             isFinite(tokens[i + 1]) && 
+             isFinite(tokens[i + 2]) ) {
+            tokens[i] = compute(tokens[i], tokens[i + 1], tokens[i + 2]);
             
-            if (symbAndNum[i] == 'Infinity') {
-                div0 = true;
+            if (tokens[i] == 'Infinity') {
+                computeFail = true;
                 break;
             }
             
-            delete symbAndNum[i + 1];
-            delete symbAndNum[i + 2];
-            for (let j = i + 1; j < symbAndNum.length - 2; j++) {
-                symbAndNum[j] = symbAndNum[j + 2];
+            delete tokens[i + 1];
+            delete tokens[i + 2];
+            for (let j = i + 1; j < tokens.length - 2; j++) {
+                tokens[j] = tokens[j + 2];
             }
-            symbAndNum.pop();
-            symbAndNum.pop();
+            tokens.pop();
+            tokens.pop();
 
             i = 0;
         } else {
@@ -55,38 +49,38 @@ function  calc(calcStr) {
         }
     }
 
-    if (missChStr) {
+    if (invalState) {
         console.log('Ошибка: недостающие данные');
-    } else if (!corrStr) {
+    } else if (!invalFormat) {
         console.log('Ошибка: некорректно введенные данные');
-    }  else if (div0) {
+    }  else if (computeFail) {
         console.log('Ошибка: попытка деления на ноль');
     } else {
-        symbAndNum = parseFloat(symbAndNum);
-        console.log(symbAndNum);
+        tokens = parseFloat(tokens);
+        console.log(tokens);
     }        
     
 }
 
-function mathematics(oper, firstNum, secNum) {
-    switch(oper) {
+function compute(operator, firstOperand, secondOperand) {
+    switch(operator) {
         case '/' : {
-            firstNum = parseFloat(firstNum) / parseFloat(secNum);
+            firstOperand = parseFloat(firstOperand) / parseFloat(secondOperand);
             break
         }
         case '*' : {
-            firstNum = parseFloat(firstNum) * parseFloat(secNum);
+            firstOperand = parseFloat(firstOperand) * parseFloat(secondOperand);
             break
         }
         case '+' : {
-            firstNum = parseFloat(firstNum) + parseFloat(secNum);
+            firstOperand = parseFloat(firstOperand) + parseFloat(secondOperand);
             break
         }
         case '-' : {
-            firstNum = parseFloat(firstNum) - parseFloat(secNum);
+            firstOperand = parseFloat(firstOperand) - parseFloat(secondOperand);
             break
         }
     }
-    firstNum = firstNum.toString();
-    return firstNum;
+    firstOperand = firstOperand.toString();
+    return firstOperand;
 } 

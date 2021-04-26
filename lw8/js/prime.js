@@ -6,13 +6,13 @@ function isPrime(n) {
             primeCheckSingle(element);
         }
     } else {
-        console.log(n.toString(), " не является числом");
+        console.log("'", n.toString(), "' не является числом");
     }
 }
 
 function primeCheckSingle(n) {
     if (typeof n !== 'number') {
-        console.log(n.toString(), " не является числом");
+        console.log("'", n.toString(), "' не является числом");
         return;
     }
     if (n < 2) {
@@ -24,14 +24,14 @@ function primeCheckSingle(n) {
     }
 
     let i = 2;
-    let numberState = " - простое число";
+    let solverState = " - простое число";
     const limit = Math.sqrt(n) + 1;
     while (i <= limit) {
         if (n % i === 0) {
-            numberState = " - сложное число";
+            solverState = " - сложное число";
             break;
         }
         i += 1;
     }
-    console.log(n.toString(), numberState);
+    console.log(n.toString(), solverState);
 }
