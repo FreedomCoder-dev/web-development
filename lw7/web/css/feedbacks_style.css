@@ -1,0 +1,157 @@
+@font-face
+{
+    font-family: OpenSansSemibold;
+    src: url("../fonts/opensans_semibold.ttf");
+}
+
+@font-face
+{
+    font-family: OpenSansBold;
+    src: url("../fonts/opensans_bold.ttf");
+}
+@font-face
+{
+    font-family: OpenSansRegular;
+    src: url("../fonts/opensans_regular.ttf");
+}
+
+.form-block
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: 940px;
+}
+
+.submit
+{
+    width: 220px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    border-radius: 6px;
+    background: #15a98c;
+    border-width: 0px;
+    font: normal 14px Georgia;
+}
+
+.submit:active
+{
+    background: #098d72;
+}
+
+.input-box
+{
+    width: 530px;
+    height: 50px;
+    border: 2px solid #a6a6a6;
+    border-radius: 4px;
+    font: normal 18px OpenSansRegular;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+.input-box:hover
+{
+    border: 2px solid #15a98c;
+}
+
+.message-box
+{
+    width: 530px;
+    height: 150px;
+    resize: none;
+    border: 2px solid #a6a6a6;
+    border-radius: 4px;
+    font: normal 18px OpenSansRegular;
+    margin-bottom: 20px;
+}
+
+.message-box:hover
+{
+    border: 2px solid #15a98c;
+}
+
+.form-text
+{
+    font: normal 18px OpenSansRegular;
+}
+
+.required-field
+{
+    color: #ee0707;
+}
+
+.select-box
+{
+    width: 550px;
+    height: 50px;
+    resize: none;
+    border: 2px solid #a6a6a6;
+    border-radius: 4px;
+    font: normal 18px OpenSansRegular;
+    padding-left: 15px;
+}
+
+.select-box:hovered
+{
+    border: 2px solid #15a98c;
+}
+
+.success-message
+{
+    border: 2px solid #76ff03;
+    border-radius: 4px;
+    background-color: #b0ff57;
+    padding: 10px;
+    font: normal 18px OpenSansRegular;
+}
+
+.success-message:hovered
+{
+    border: 2px solid #15a98c;
+}
+
+.failure-message
+{
+    border: 2px solid #ff1744;
+    border-radius: 4px;
+    background-color: #ff616f;
+    padding: 10px;
+    font: normal 18px OpenSansRegular;
+}
+
+.failure-message:hovered
+{
+    border: 2px solid #15a98c;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+ul
+{
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    padding-left: 18px;
+}
+
+ol
+{
+    margin: 0;
+    padding: 0;
+    padding-left: 18px;
+}
+

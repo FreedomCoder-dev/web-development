@@ -105,44 +105,7 @@
             <button class="all-films-button">Все фильмы</button>
         </div>
     </div>
-    <div class="form-block">
-        <div class="write-me-head"><div class="gray-line"></div><div class="write-me-text">НАПИШИ МНЕ</div><div class="gray-line"></div></div>
-        <form method="POST" class="form">
-            <p>
-                <label for="name" class="form-text">Ваше имя<span class="required-field"> *</span></label>
-            </p>
-            <input type="text" id="name" name="name" required class="input-box"/>
-            <p>
-                <label for="email" class="form-text">Ваш email<span class="required-field"> *</span></label>
-            </p>
-
-            <input type="email" id="email" name="email" required class="input-box"/>
-            <p>
-                <label for="country" class="form-text">Откуда вы?</label>
-            </p>
-            <select name="country" id="country" class="select-box">
-                <option value="rus" class="input_text">Россия</option>
-                <option value="uk" class="input_text">Украина</option>
-                <option value="by" class="input_text">Беларусь</option>
-                <option value="eng" class="input_text">Великобритания</option>
-                <option value="fr" class="input_text">Франция</option>
-                <option value="ger" class="input_text">Германия</option>
-                <option value="usa" class="input_text">США</option>
-            </select>
-            <p class="form-text">Ваш пол</p>
-            <input type="radio" id="male" name="gender" value="male" checked>
-            <label for="male" class="form-text">Мужской</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female" class="form-text">Женский</label>
-            <p>
-                <label for="message" class="form-text">Ваше сообщение<span class="required-field"> *</span></label>
-            </p>
-            <textarea name="message" required id="message" class="message-box"></textarea>
-            <p>
-                <input type="submit" value="Отправить" class="submit">
-            </p>
-        </form>
-    </div>
+    <?php require('form.tpl.php'); ?>
     <div class="footer">
         <p class="copyright">FCD 2021</p>
     </div>
